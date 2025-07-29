@@ -1,7 +1,7 @@
-/// <reference types="cypress" />
+/// <reference types="Cypress" />
 
 import { generateFirstName, generateLastName, generateId, generateDescription } from '../../fixtures/faker'
-import { formatDateToISO } from '../../fixtures/data'
+import { formatDateToISO } from '../../fixtures/global_commands'
 
 describe('Validation of routes Booking', () => {
 
