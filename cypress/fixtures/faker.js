@@ -11,3 +11,11 @@ export function generateLastName() {
 export function generateCep() {
     return faker.address.zipCode()
 }
+
+export function generateId() {
+    return faker.random.number()
+}
+
+export function generateDescription() {
+    return faker.lorem.lines(1)
+}

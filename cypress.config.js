@@ -7,6 +7,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: 'https://www.saucedemo.com/',
+    baseApiUrl: 'https://restful-booker.herokuapp.com/',
     password: process.env.PASSWORD
   }
 })

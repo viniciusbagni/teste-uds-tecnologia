@@ -8,7 +8,7 @@ Cypress.Commands.add('addItemToCartAndCompletingTheCheckout', () => {
         cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').should('be.visible').click()
         cy.get('[data-test="remove-sauce-labs-backpack"]').contains('Remove')
         cy.get('[data-test="shopping-cart-link"]').should('be.visible').and('exist').click()
-          cy.get('[data-test="shopping-cart-link"]').invoke('text').then((response) => {
+        cy.get('[data-test="shopping-cart-link"]').invoke('text').then((response) => {
             expect(response).eq('1')
         })
         cy.url().then((response) => {
@@ -18,7 +18,7 @@ Cypress.Commands.add('addItemToCartAndCompletingTheCheckout', () => {
             expect(response).eq(nameAtributte)
         })
         cy.get('[data-test="checkout"]').contains('Checkout').should('be.visible').click()
-           cy.url().then((response) => {
+        cy.url().then((response) => {
             expect(response).contain('/checkout')
         })
         cy.get('[data-test="title"]').should('have.text', 'Checkout: Your Information')
@@ -30,7 +30,7 @@ Cypress.Commands.add('addItemToCartAndCompletingTheCheckout', () => {
             })
         })
         cy.get('[data-test="continue"]').should('be.visible').and('exist').click()
-        cy.url().then((response) => {   
+        cy.url().then((response) => {
             expect(response).contain('/checkout-step-two')
         })
         cy.get('[data-test="inventory-item-name"]').should('have.text', nameAtributte)
